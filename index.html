@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="../../assets/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
         <style>
           /* Remove the navbar's default margin-bottom and rounded borders */ 
           .navbar {
@@ -48,7 +49,14 @@
     <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1EiSvktxEwjKX4H84aBATwuOdzBUKl_oj/preview" allowfullscreen></iframe>
 </div>
-        
+   <script>
+  $(document).on('ready', function () {
+    // initialization of video player
+    $('.js-inline-video-player').each(function () {
+      var videoPlayer = new HSVideoPlayer($(this)).init();
+    });
+  });
+</script>  
     
   </div>
 </div>  
